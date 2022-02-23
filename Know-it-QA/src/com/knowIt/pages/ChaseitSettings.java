@@ -40,6 +40,7 @@ public class ChaseitSettings {
 		
 		Select st =new Select (ledgerselector);
 		st.selectByIndex(1);
+		Thread.sleep(7000);
 		System.out.println("select ledger");
 		
 		

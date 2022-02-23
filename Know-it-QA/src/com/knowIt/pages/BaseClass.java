@@ -15,23 +15,28 @@ public class BaseClass {
 	public WebDriver driver ;
 	
 	@BeforeTest
-    public void setup() {
+    public void setup() throws Exception {
     	
-    	driver = BrowserFactory.StartBrowser(driver,"chrome","https://Beta.know-it.co.uk");
+    	driver = BrowserFactory.StartBrowser(driver,"chrome","https://test.know-it.co.uk");
+    	Thread.sleep(5000);
     }
 	
 	@Test
 	public void login  () throws Exception {
 		
 	LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
-	lp.login("demokit2@hotmail.com","Kit@12345678");
+	lp.login("nibesh@know-it.co.uk","Kit@12345678");
+	Thread.sleep(5000);
+	
 	
 	}
   
     
 	@AfterTest
-    public void teardown () {
+    public void teardown () throws Exception {
     	BrowserFactory.quitBrowser(driver);
+    	Thread.sleep(5000);
+    	
     	
     	
     	

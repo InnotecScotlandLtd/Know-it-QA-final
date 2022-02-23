@@ -14,19 +14,21 @@ public class BrowserFactory {
 	   
 	  //google Chrome
 	   if (browserName.equalsIgnoreCase("chrome")) {
-		   System.setProperty("webdriver.chrome.driver","C:\\Users\\mrnib\\Downloads\\Downloads with automation tools\\chromedriver_win32\\chromedriver.exe");
+		   System.setProperty("webdriver.chrome.driver","C:\\Users\\mrnib\\Documents\\Office\\Automation tools\\chromedriver.exe");
 		   driver = new ChromeDriver();
 		    }
 	   
 	   //Firefox
 	   else if (browserName.equalsIgnoreCase("firefox")) {
-		   System.setProperty("webdriver.gecko.driver","C:\\Users\\mrnib\\Downloads\\Downloads with automation tools\\Drivers\\geckodriver.exe");
+		   System.setProperty("webdriver.gecko.driver","C:\\Users\\mrnib\\Documents\\Office\\Automation tools\\geckodriver.exe");
 		   driver= new FirefoxDriver();
 		   
 	   }
 	   
 	  driver.manage().window().maximize ();
-	  driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+	  //driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+	  
+	 
 	  driver.get(url);
 	  
 	return driver;

@@ -18,9 +18,13 @@ public class ChaseitInvoices {
 	@FindBy (xpath="//*[@id=\"container\"]/app-navigation-bar/app-navigation-section[3]/header/img")WebElement Chaseit ;
 	@FindBy (xpath="//*[@id=\"container\"]/app-navigation-bar/app-navigation-section[3]/ul/li[5]/a")WebElement Invoices ;
 	
+
+	
     //Click on a company, invoice and contact Details
 	@FindBy (xpath= "//*[@id=\"invoiceListTable\"]/app-list/div[3]/div[4]/h3")WebElement companyclick ;
-	@FindBy (xpath="//*[@id=\"invoiceListTable\"]/app-list/div[3]/div[4]/app-table/div/div[2]/div[1]/a")WebElement invoiceclick ;
+	@FindBy (xpath="//*[@id=\"invoiceListTable\"]/app-list/div[3]/div[1]/app-table/div/div[2]/div[1]/a")WebElement invoiceclick ;
+	
+	
 	@FindBy (xpath="//*[@id=\"paymentsAndNotes\"]/div[1]/p[2]")WebElement contactdetails ;
 	 
 	//Add expected payments
@@ -62,9 +66,9 @@ public class ChaseitInvoices {
 		Thread.sleep(5000);
 		System.out.println("Click Invoices");
 		
-		companyclick.click ();
-		Thread.sleep(5000);
-		System.out.println("click on the comapany");
+//		companyclick.click ();
+//		Thread.sleep(5000);
+//		System.out.println("click on the comapany");
 		
 		invoiceclick.click();
 		Thread.sleep(5000);

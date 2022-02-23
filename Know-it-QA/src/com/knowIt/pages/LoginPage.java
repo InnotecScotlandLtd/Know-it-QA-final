@@ -19,20 +19,23 @@ public class LoginPage {
 	
 	@FindBy (xpath="//*[@id=\"email\"]")WebElement username ;
 	@FindBy (xpath="//*[@id=\"password\"]")WebElement password ;
-	@FindBy (xpath="//*[@id=\"loginForm\"]/form/app-button/button")WebElement login ;
+	@FindBy (xpath="//*[@id=\"loginForm\"]/form/div[2]/app-button/button")WebElement login ;
 	
-	
+	              
 	public void login (String user, String pass) throws Exception {
 		
 		username.sendKeys(user);
+		Thread.sleep(5000);
 		System.out.println("Entered Username");
 		
 		password.sendKeys(pass);
-		System.out.println("Entered password");
 		Thread.sleep(5000);
+		System.out.println("Entered password");
+		
 		
 		login.click();
 		Thread.sleep(5000);
+		System.out.println("Login successful");
 		 
 		
 		

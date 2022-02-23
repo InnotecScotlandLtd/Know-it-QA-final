@@ -5,6 +5,8 @@ package com.knowIt.testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.knowIt.pages.LoginPage;
@@ -15,13 +17,20 @@ public class LoginT1  {
 	
 	WebDriver driver ;
 	
+ 
+	
+	@BeforeTest
+    public void setup() throws Exception {
+    	
+    	driver = BrowserFactory.StartBrowser(driver,"chrome","https://test.know-it.co.uk");
+    	Thread.sleep(5000);
+    }
+	
 	@Test
 	public void login  () throws Exception {
 		
-		driver = BrowserFactory.StartBrowser(driver,"chrome","https://Beta.know-it.co.uk");
-		
-		LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
-		lp.login("demokit10@hotmail.com","Kit@12345678");
+    	LoginPage lp = PageFactory.initElements(driver,LoginPage.class);
+		lp.login("nibesh@know-it.co.uk","Kit@12345678");
 	  
 	    String ActualTitle = driver.getTitle();
 	    String ExpectedTitle = "Know-it - Dashboard" ;
@@ -31,5 +40,11 @@ public class LoginT1  {
 
 }
 	
+	
+	@AfterTest
+    public void teardown () throws Exception {
+    	BrowserFactory.quitBrowser(driver);
+    	Thread.sleep(5000);
+}
 }
 
