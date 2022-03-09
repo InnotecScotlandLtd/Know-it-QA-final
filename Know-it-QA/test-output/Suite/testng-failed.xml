@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Nopackage(failed)">
+    <classes>
+      <class name="com.knowIt.testcases.CheckitNoticeT13">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="checknotices"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.CheckitNoticeT13 -->
+      <class name="com.knowIt.testcases.ChaseitYourSchedultT14">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="chaseschedule"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.ChaseitYourSchedultT14 -->
+      <class name="com.knowIt.testcases.ChaseitSettingsT8">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="chasesettings"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.ChaseitSettingsT8 -->
+      <class name="com.knowIt.testcases.ChaseitInvoicesT9">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="invoices"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.ChaseitInvoicesT9 -->
+      <class name="com.knowIt.testcases.CheckitCreditreportsT11">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="creditReports"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.CheckitCreditreportsT11 -->
+      <class name="com.knowIt.testcases.XeroLoginT2">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="loginwithxero"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.XeroLoginT2 -->
+      <class name="com.knowIt.testcases.CheckitDashboardT10">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="Dashboard"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.CheckitDashboardT10 -->
+      <class name="com.knowIt.testcases.CheckitUnsecuredCreditors15">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="unsecuredCreditors"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.CheckitUnsecuredCreditors15 -->
+      <class name="com.knowIt.testcases.CheckitCreditMonitoringT12">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+          <include name="monitoring"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.CheckitCreditMonitoringT12 -->
+      <class name="com.knowIt.testcases.MyinterationT6">
+        <methods>
+          <include name="acintegration"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.knowIt.testcases.MyinterationT6 -->
+    </classes>
+  </test> <!-- Nopackage(failed) -->
+</suite> <!-- Failed suite [Suite] -->
