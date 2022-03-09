@@ -15,7 +15,7 @@ public class ChaseitInvoicesT9 extends BaseClass {
 	public void invoices () throws Exception {
 		
 		ChaseitInvoices ci = PageFactory.initElements(driver, ChaseitInvoices.class);
-		ci.invoice("25012022", "Tezter's test note for testing", "Addframe Limited");
+		ci.invoice("25032022", "Tezter's test note for testing", "Addframe Limited");
 		
 		
 	}

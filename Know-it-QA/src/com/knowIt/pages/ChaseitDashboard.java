@@ -1,11 +1,14 @@
 package com.knowIt.pages;
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ChaseitDashboard extends BaseClass {
+public class ChaseitDashboard  {
 	
 	WebDriver driver ;
 	
@@ -21,6 +24,14 @@ public class ChaseitDashboard extends BaseClass {
 	
 	@FindBy(xpath="//*[@id=\"sendToCollectConfirmBox\"]/div/app-button[2]/button")WebElement cancel ;
 	@FindBy(xpath="//*[@id=\"sendToCollectConfirmBox\"]/div/app-button[1]/button")WebElement sendtocollect ;
+	@FindBy(xpath="//*[@id=\"dashboard\"]/div[2]/app-aged-debtors-list/app-modal/div/div/div")WebElement closepopup ;
+	@FindBy(xpath="//*[@id=\"collectInvoiceList\"]/app-list/app-table/div/div[4]/div[6]/div/input")WebElement invoiceselect ;
+	@FindBy(xpath="//*[@id=\"collectInvoiceList\"]/app-button/button")WebElement cont ;
+	
+
+	 
+	
+	
 	
 	public void cdashboard () throws Exception {
 		
@@ -33,14 +44,38 @@ public class ChaseitDashboard extends BaseClass {
 		collectit.click();
 		Thread.sleep(5000);
 		
-		cancel.click();
+		closepopup.click();
 		Thread.sleep(5000);
+		
+			
+		collectit.click();
+		Thread.sleep(5000);
+		
+		invoiceselect.click();
+		Thread.sleep(5000);
+
 		
 		collectit.click();
 		Thread.sleep(5000);
 		
-		sendtocollect.click();
-		Thread.sleep(5000);
+		invoiceselect.click();
+		Thread.sleep(10000);
+		
+		boolean searchIconEnabled = cont.isEnabled();
+		System.out.println("Button enabled");
+		
+		 if (searchIconEnabled==true)
+         {
+                // click on the search button
+                WebElement searchIcon = cont;
+                searchIcon.click();
+                Thread.sleep(5000);
+ 
+		
+//        cont.click();
+//		Thread.sleep(10000);
+//		
+		
 		
 		System.out.println("Chase-it dashboard-pass");
 		
@@ -50,7 +85,7 @@ public class ChaseitDashboard extends BaseClass {
 		
 		
 		
-		
+         }	
 		
 		
 		

@@ -24,7 +24,7 @@ public class ChaseitYourSchedule {
 	@FindBy (xpath="//*[@id=\"minuteDigits\"]/input")WebElement minutes ;
 	@FindBy (xpath="//*[@id=\"schedule\"]/app-welcomebox/div/app-schedule-time/div[2]/div")WebElement setnewtime;
 	
-	//initial chasae
+	//initial chase
 	@FindBy (xpath="//*[@id=\"initialReminder\"]/div[2]/div/div[2]/div/div[3]/app-template-selector/select")WebElement initialchaseemaialatemp ;
 	@FindBy (xpath="//*[@id=\"initialReminder\"]/div[2]/div/div[2]/div/div[2]/div/label/div")WebElement inemail ;
 	@FindBy(xpath="//*[@id=\"initialEnableMsg\"]/div[1]/div/div[2]")WebElement notready ;
@@ -37,7 +37,7 @@ public class ChaseitYourSchedule {
 	@FindBy(xpath="//*[@id=\"chase\"]/app-chase-schedule/app-chase-preview-dialog/app-modal/div/div/div/button/span")WebElement closepopup ;
 	
 	//Before invoice due-email
-	@FindBy (xpath="//*[@id=\"beforeDueReminders\"]/div[2]/div/div[1]/div")WebElement daysbefore ;
+	@FindBy (xpath="//*[@id=\"beforeDueReminders\"]/div[2]/div/div[1]/h4/input")WebElement daysbefore ;
 	@FindBy (xpath="//*[@id=\"beforeDueReminders\"]/div[2]/div/div[2]/div[1]/div[2]/div/label/div ")WebElement bdemail;
 	@FindBy (xpath="//*[@id=\"beforeDueReminders\"]/div[2]/div/div[2]/div[1]/div[3]/app-template-selector/select")WebElement bdemailtemplate ;
 	@FindBy (xpath="//*[@id=\"initialReminder\"]/div[2]/div/div[2]/div/div[3]/app-template-selector/select")WebElement bdemailpreview ;
@@ -96,9 +96,11 @@ public void chasers (String hr,String min,String dbefore,String reminder,String 
 	
 	chaseit.click () ;
 	Thread.sleep(5000);
+	System.out.println("click on chase-it");
 	
 	YSchedule.click ();
 	Thread.sleep(5000);
+	System.out.println("click your schedule");
 	
 	
 	Select st = new Select (ledgerselector) ;
@@ -108,82 +110,112 @@ public void chasers (String hr,String min,String dbefore,String reminder,String 
 	hours.click();
 	hours.sendKeys(hr);
 	Thread.sleep(3000);
+	System.out.println("set hours");
+	
 	
 	minutes.click();
 	minutes.sendKeys(min);
+	Thread.sleep(5000);
+	System.out.println("set minutes");
 	
 	setnewtime.click();
 	Thread.sleep(5000);
+	System.out.println("click set new time");
 	
 	Select st2 =new Select (initialchaseemaialatemp);
 	st2.selectByIndex(2);
 	Thread.sleep(5000);
+	System.out.println("Select initial chase template");
 	
 	inemail.click();
 	Thread.sleep(5000);
+	System.out.println("Initial Email click");
 	
 	notready.click();
 	Thread.sleep (5000);
+	System.out.println("Not ready yet");
 	
 	inemail.click();
 	Thread.sleep(5000);
+	System.out.println("Initial Email click");
 	
 	activateschedule.click();
 	Thread.sleep(3000);
+	System.out.println("activate schedule");
 	
 	inemailpreview.click ();
 	Thread.sleep(5000);
+	System.out.println("Initial email preview");
+	
 	
 	multiple.click();
 	Thread.sleep(5000);
+	System.out.println("initial email multiple preview");
 	
 	closepopup.click();
 	Thread.sleep(5000);
+	System.out.println("close pop up");
 	
 	daysbefore.sendKeys(dbefore);
-	Thread.sleep(3000);
+	Thread.sleep(6000);
+	System.out.println("set number of days before");
 	
 	bdemail.click();
 	Thread.sleep(5000);
+	System.out.println("Enable before due email");
 	
 	Select st3 =new Select (bdemailtemplate);
 	st3.selectByIndex(3);
 	Thread.sleep(5000);
+	System.out.println("Select before due email template");
 	
 	bdemailpreview.click();
 	Thread.sleep(5000);
+	System.out.println("Before due email preview");
 	
 	multiple.click();
 	Thread.sleep(5000);
+	System.out.println("Before due email preview-multiple");
 	
 	closepopup.click();
 	Thread.sleep(5000);
+	System.out.println("Close before due email pop up");
 	
 	bdletter.click();
 	Thread.sleep(5000);
+	System.out.println("Before due letter template");
 	
 	
 	Select st4 = new Select(bdlettertemplate);
 	st4.selectByIndex(4);
 	Thread.sleep(5000);
+	System.out.println("Select letter template");
 	
 	bdletterpreview.click();
 	Thread.sleep(5000);
+	System.out.println("Before due letter preview-single");
 	
 	multiple.click();
 	Thread.sleep(5000);
+	System.out.println("Before due letter preview-multiple");
 	
 	closepopup.click();
 	Thread.sleep(5000);
+	System.out.println("close bdefore due letter pop up");
 	
 	bdsms.click();
 	Thread.sleep(5000);
+	System.out.println("before due sms");
+	
 	
 	Select st5 = new Select (bdsmstemplate) ;
 	st5.selectByIndex(2);
+	Thread.sleep(5000);
+	System.out.println("before due sms template");
 	
 	bdsmspreview.click();
 	Thread.sleep(5000);
+	System.out.println("before due sms preview");
 	
 	multiple.click();
 	Thread.sleep(5000);

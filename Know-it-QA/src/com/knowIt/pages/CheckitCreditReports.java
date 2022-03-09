@@ -27,6 +27,7 @@ public class CheckitCreditReports {
     //purchase section
     @FindBy(xpath="//*[@id=\"creditReportListHeader\"]/app-search/div/div[2]/app-slidepanel/div[2]/div/div[1]/div/app-button/button")WebElement close ;
     @FindBy(xpath="//*[@id=\"creditReportListHeader\"]/app-search/div/div[2]/app-slidepanel/div[2]/div/div[3]/app-searchresult[1]/div/div/div[3]/app-button/button")WebElement purchase ;
+   
     
     //compnyname 
     @FindBy(xpath="//*[@id=\"creditReportsListTable\"]/app-list/app-table/div/div[2]/div[2]/a")WebElement companyname ;
@@ -67,7 +68,7 @@ public class CheckitCreditReports {
     	System.out.println("Search for credit report");
     	
     	purchase.click();
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     	System.out.println("purchase credit");
     	
     	companyname.click();
@@ -90,38 +91,7 @@ public class CheckitCreditReports {
     	Thread.sleep(5000);
     	System.out.println("Print credit report");
     	
-    	
-    	view.click () ;
-    	Thread.sleep(5000);
-    	System.out.println("View notices");
-    	
-    	close.click();
-    	Thread.sleep(5000);
-    	System.out.println("close popup");
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    }
+       }
     
     
     

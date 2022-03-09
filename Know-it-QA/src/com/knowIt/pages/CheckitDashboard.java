@@ -33,6 +33,8 @@ public class CheckitDashboard {
 	
 	//Gazette notices
 	@FindBy(xpath="//*[@id=\"recentNoticesList\"]/div/app-list/app-table/div/div[2]/div[6]/app-actions/ul/li/button ")WebElement viewnotices ;
+	               
+	                
 	@FindBy(xpath="//*[@id=\"dashboard\"]/div[3]/app-recent-notices/app-slidepanel/div[2]/div/div[1]/div/app-button/button ")WebElement close ;
 	@FindBy(xpath="//*[@id=\"recentNoticesList\"]/div/app-list/app-table/div/app-paging/button[2] ")WebElement next ;
 	@FindBy(xpath ="//*[@id=\"recentNoticesList\"]/div/app-list/app-table/div/app-paging/button[1]")WebElement prev ;

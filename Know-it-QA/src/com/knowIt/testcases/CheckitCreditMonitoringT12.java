@@ -15,7 +15,7 @@ public class CheckitCreditMonitoringT12 extends BaseClass {
 	public void monitoring () throws Exception {
 		
 		CheckitCreditmonitoring cm = PageFactory.initElements(driver, CheckitCreditmonitoring.class);
-		cm.monitoring("Know-it (Global)");
+		cm.monitoring("THEIR NIBS");
 		
 	}
 	

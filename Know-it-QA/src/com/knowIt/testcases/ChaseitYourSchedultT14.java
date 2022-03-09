@@ -14,8 +14,7 @@ public class ChaseitYourSchedultT14 extends BaseClass {
     public void chaseschedule () throws Exception {
     	
     	ChaseitYourSchedule ch = PageFactory.initElements(driver, ChaseitYourSchedule.class);
-    	ch.chasers("10","30","7", "1", "7", "10");
-    	
+    	ch.chasers("13","50", "9", "1","9" ,"36");
     	
     }
 	

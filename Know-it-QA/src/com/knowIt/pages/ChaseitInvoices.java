@@ -31,26 +31,27 @@ public class ChaseitInvoices {
 	@FindBy (xpath="//*[@id=\"invoiceActions\"]/app-button[1]/button")WebElement addexpectedpayment ;
 	@FindBy (xpath= "//*[@id=\"invoiceNotes\"]/app-addexpectedpayments/app-slidepanel/div[2]/div/div[1]/div/app-button/button")WebElement closeexppaymentpup ;
 	@FindBy (xpath="//*[@id=\"ep_date_0\"]")WebElement paymentdate ;
-	@FindBy (xpath="//*[@id=\"addexpectedpaymentsForm\"]/form/app-button/button")WebElement savebutton1;
+	@FindBy (xpath="//*[@id=\"addexpectedpaymentsForm\"]/form/div[2]/app-button/button")WebElement savebutton1;
+	                 
 		
 	//Add Notes
 	@FindBy (xpath="//*[@id=\"invoiceActions\"]/app-button[2]/button")WebElement addnote ;
 	@FindBy (xpath="//*[@id=\"invoiceNotes\"]/app-addnote/app-slidepanel/div[2]/div/div[1]/div/app-button/button") WebElement closenotepopup ;
 	@FindBy (xpath="//*[@id=\"noteType\"]" )WebElement notetype ;
 	@FindBy (xpath="//*[@id=\"noteContent\"]")WebElement notecontent ;
-	@FindBy (xpath="//*[@id=\"addNoteForm\"]/form/app-button/button")WebElement savebutton2;
+	@FindBy (xpath="//*[@id=\"addNoteForm\"]/form/div[2]/app-button/button")WebElement savebutton2;
 	
 	//search by company name 
 	@FindBy (xpath="//*[@id=\"ledgerCompany.companyName\"]")WebElement companysearch ;
 	@FindBy (xpath=" //*[@id=\"invoiceListTable\"]/app-list/div[3]/div/app-table/div/div[2]/div[6]/app-actions/ul/li[1]/button")WebElement sendnow ;
 	@FindBy (xpath="//*[@id=\"chase\"]/app-invoice-list/app-slidepanel/div[2]/div/div[1]/div/app-button/button")WebElement closesendnowpopup ;
-	@FindBy(xpath="//*[@id=\"templates\"]") WebElement sendreminder;
+	@FindBy(xpath="//*[@id=\"template\"]") WebElement sendreminder;
 	
 	@FindBy(xpath="//*[@id=\"previewInvoice\"]")WebElement preview ;   
 	@FindBy(xpath="//*[@id=\"chase\"]/app-invoice-list/app-chase-preview-dialog/app-modal/div/div/div/header/app-toggle-button/label/div/span")WebElement multiple ;
 	         
 	@FindBy(xpath="//*[@id=\"chase\"]/app-invoice-list/app-chase-preview-dialog/app-modal/div/div/div/button/span")WebElement closepopup ;
-    @FindBy(xpath="//*[@id=\"sendReminderForm\"]/form/app-button/button")WebElement send ;  
+    @FindBy(xpath="//*[@id=\"sendReminderForm\"]/form/div[2]/app-button[2]/button")WebElement send ;  
 	@FindBy(xpath="//*[@id=\"invoiceListTable\"]/app-list/div[3]/div/app-table/div/div[2]/div[6]/app-actions/ul/li[2]/button")WebElement pause ;
 	
 	               
@@ -117,6 +118,7 @@ public class ChaseitInvoices {
 		
 		Select st = new Select (notetype);
 		st.selectByIndex(2);
+		Thread.sleep(5000);
 		System.out.println("Select Note type");
 		
 		notecontent.sendKeys (content);
@@ -154,8 +156,8 @@ public class ChaseitInvoices {
 		
 		Select st1=new Select (sendreminder);
 		st1.selectByIndex(3);
-		Thread.sleep(5000);
-		System.out.println("");
+		Thread.sleep(15000);
+		System.out.println("select reminder from the template");
 		
 		preview.click();
 		Thread.sleep(5000);
@@ -166,20 +168,20 @@ public class ChaseitInvoices {
 		System.out.println("Multiple preview");
 		
 		closepopup.click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		System.out.println("close popup");
 		
 		
 		send.click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		System.out.println("send");
 		
 		companysearch.sendKeys(cnamesearch);
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		System.out.println("company search");
 		
 		pause.click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		System.out.println("Click pause");
 				
 	}

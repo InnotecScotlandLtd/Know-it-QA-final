@@ -14,7 +14,7 @@ public class CheckitUnsecuredCreditors15 extends BaseClass {
 	public void  unsecuredCreditors () throws Exception {
 		
 		CheckitUnsecuredCreditors uc = PageFactory.initElements(driver,CheckitUnsecuredCreditors.class);
-	    uc.UnsCreditrors("HIT TRAINING LTD");
+	    uc.UnsCreditrors("MAGNELA LTD");
 
 }
 	

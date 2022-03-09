@@ -43,37 +43,44 @@ public class ChaseitSettings {
 		Thread.sleep(7000);
 		System.out.println("select ledger");
 		
-		
+		fromname.clear();
 		fromname.sendKeys(fname);
 		Thread.sleep(3000);
 		System.out.println("from name");
 		
+		address1.clear();
 		address1.sendKeys(add1);
 		Thread.sleep(3000);
 		System.out.println("address1");
 		
+		address2.clear();
 		address2.sendKeys (add2);
 		Thread.sleep (3000);
 		System.out.println("address2");
 		
+		town.clear();
 		town.sendKeys(twn);
 		Thread.sleep(3000);
 		System.out.println("town");
 		
+		county.clear();
 		county.sendKeys (count);
 		Thread.sleep(3000);
 		System.out.println("county");
 		
+		postcode.clear();
 		postcode.sendKeys(pcode);
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		System.out.println("postcode");
 		
+		
 		limitedcompanycheckbox.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		System.out.println("limited company checkbox");
 		
+		companynumber.clear();
 		companynumber.sendKeys(compno);
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		System.out.println("company number");
 		
 		savedetails.click();

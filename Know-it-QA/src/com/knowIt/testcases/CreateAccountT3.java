@@ -22,7 +22,7 @@ public class CreateAccountT3 {
 	@BeforeTest
     public void setup() throws Exception {
     	
-    	driver = BrowserFactory.StartBrowser(driver,"chrome","https://test.know-it.co.uk");
+    	driver = BrowserFactory.StartBrowser(driver,"chrome","https://beta.know-it.co.uk");
     	Thread.sleep(5000);
     }
 	
